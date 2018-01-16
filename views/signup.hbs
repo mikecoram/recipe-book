@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="col-md-6 col-md-offset-3">
+        <form action="/signup" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <input id="emailAddress" name="emailAddress" class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div>Your password must be at least 6 characters long.</div>
+                <input id="password" name="password" type="password" class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+
+            <div id="localError" hidden="true" class="alert alert-danger"></div>
+            {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+        </form>
+    </div>
+</div> <!-- /container -->
+
+<script src="/js/validation.js" type="text/javascript"></script>
+<script src="/js/signup.js" type="text/javascript"></script>

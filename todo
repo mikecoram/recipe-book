@@ -1,0 +1,21 @@
+Users
+Recipes
+    userId
+    title
+    method
+    nutrition
+Ingredients
+    userId
+    title
+RecipeIngredients
+    recipeId
+    ingredientId
+    quantity
+    text
+Tags
+    userId
+    title
+    color
+RecipeTags
+    recipeId
+    tagId

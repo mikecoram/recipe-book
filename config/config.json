@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "mike",
+    "password": "",
+    "database": "mike",
+    "host": "localhost",
+    "dialect": "postgres",
+    "email": {
+      "host": "localhost",
+      "port": 250,
+      "secure": false
+    }
+  },
+  "test": {
+    "username": "mike",
+    "password": "",
+    "database": "mike",
+    "host": "localhost",
+    "dialect": "postgres",
+    "email": {
+      "host": "localhost",
+      "port": 250,
+      "secure": false
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
