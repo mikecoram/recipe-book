@@ -17,6 +17,9 @@ exports.main = function (app) {
     app.get('/forgottenpassword', [redirectToDashboard], authHandler.forgottenpassword);
     app.get('/resetpassword/:token', authHandler.resetPassword);
 
+    const recipeHandler = require('./handlers/recipes');
+    app.get('/recipes/new', [isLoggedIn], recipeHandler.new);
+
     var adminController = require('./controllers/admin');
     // Admin middleware
     var isAdmin = adminController.isAdmin;
