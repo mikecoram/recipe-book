@@ -1,0 +1,17 @@
+<div class="container" style="white-space:pre-line;">
+    <h3>{{recipe.title}}</h3>
+    <h4>Tags</h4>
+    <ul>
+        {{#each recipe.tags}}
+            <li>{{title}}</li>
+        {{/each}}
+    </ul>
+    <h4>Ingredients:</h4>
+    <ul>
+        {{#each recipe.ingredients}}
+            <li>{{title}}</li>
+        {{/each}}
+    </ul>
+    <h4>Method</h4>
+    {{recipe.method}}
+</div>

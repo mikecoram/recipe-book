@@ -26,12 +26,14 @@ module.exports = function(sequelize, DataTypes) {
     },
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  User.associate = function(models) {
+    User.hasMany(models.Recipe, {
+        foreignKey: 'userId',
+        as: 'recipes'
+    });
+  }
+
   return User;
 };

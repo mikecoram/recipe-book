@@ -18,6 +18,8 @@ exports.main = function (app) {
     app.get('/resetpassword/:token', authHandler.resetPassword);
 
     const recipeHandler = require('./handlers/recipes');
+    app.get('/recipes', [isLoggedIn], recipeHandler.all);
+    app.get('/recipe/:recipeId', [isLoggedIn], recipeHandler.view);
     app.get('/recipes/new', [isLoggedIn], recipeHandler.new);
     app.post('/recipes/new', [isLoggedIn], recipeHandler.create);
 

@@ -13,6 +13,16 @@ module.exports = function(sequelize, DataTypes) {
       targetKey: 'id',
       as: 'user'
     });
+
+    Recipe.hasMany(models.RecipeIngredient, {
+      foreignKey: 'recipeId',
+      as: 'recipeIngredients'
+    });
+
+    Recipe.hasMany(models.RecipeTag, {
+      foreignKey: 'recipeId',
+      as: 'recipeTags'
+    });
   }
 
   return Recipe;

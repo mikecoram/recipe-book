@@ -12,6 +12,11 @@ module.exports = function(sequelize, DataTypes) {
       targetKey: 'id',
       as: 'user'
     });
+
+    Tag.hasMany(models.RecipeTag, {
+      foreignKey: 'tagId',
+      as: 'recipeTags'
+    });
   }
 
   return Tag;
