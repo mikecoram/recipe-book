@@ -1,0 +1,58 @@
+<style>
+    .col-md-8 {
+        margin-bottom: 0.5em;
+    }
+    .step-row {
+        margin-bottom: 0.5em;
+    }
+    .centered {
+        text-align: center;
+    }
+
+    .right {
+        text-align: right;
+    }
+</style>
+
+<div class="container">
+
+    <div class="col-md-6 col-md-offset-3">
+        <form action="/recipes/new" method="POST">
+            <div class="form-group">
+                <label>Title</label>
+                <input class="form-control" name="title" placeholder="Recipe title">
+            </div>
+            <label>Ingredients</label>
+            <div class="form-group">
+                {{#each ingredients}}
+                    <div class="col-md-4">
+                        <input name="ing-quantity-{{num}}" type="text" class="form-control" placeholder="Quantity">
+                    </div>
+                    <div class="col-md-8">
+                        <input name="ing-{{num}}" type="text" class="form-control" placeholder="Ingredient">
+                    </div>
+                {{/each}}
+                <div class="centered">
+                    <button class="btn btn-primary">Add Ingredient</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Method</label>
+                {{#each steps}}
+                    <input name="step-{{num}}" class="form-control step-row" placeholder="Step {{num}}">
+                {{/each}}
+                <div class="centered">
+                    <button class="btn btn-primary">Add Step</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Tags</label>
+                <input name="tags" class="form-control" placeholder="Add some tags seperated by spaces">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-success">Save this Recipe</button>                
+            </div>
+        </form>
+    </div>
+
+</div> <!-- /container -->

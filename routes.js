@@ -19,6 +19,7 @@ exports.main = function (app) {
 
     const recipeHandler = require('./handlers/recipes');
     app.get('/recipes/new', [isLoggedIn], recipeHandler.new);
+    app.post('/recipes/new', [isLoggedIn], recipeHandler.create);
 
     var adminController = require('./controllers/admin');
     // Admin middleware
