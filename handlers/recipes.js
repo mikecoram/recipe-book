@@ -1,4 +1,5 @@
 const recipesHandler = require('../lib/recipes');
+const tagHandler = require('../lib/tags');
 
 exports.view = async function(req, res) {
     let recipe = await recipesHandler.get(req.user.id, req.params.recipeId);
@@ -10,9 +11,12 @@ exports.view = async function(req, res) {
 
 exports.all = async function(req, res) {
     let recipes = await recipesHandler.getAll(req.user.id);
+    let tags = await tagHandler.all(req.user.id);
+    console.log(tags);
     res.render('recipes/all', {
         authorised: true,
-        recipes: recipes
+        recipes: recipes,
+        tags: tags
     });
 }
 
