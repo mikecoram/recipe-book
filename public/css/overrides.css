@@ -1,3 +1,15 @@
 .alert-danger {
     white-space: pre-line;
 }
+
+.navbar {
+    background-color:rgba(0, 0, 0, 0.08);
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
