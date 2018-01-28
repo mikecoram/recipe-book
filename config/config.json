@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "mike",
+    "username": "Mike",
     "password": "",
-    "database": "mike",
+    "database": "Mike",
     "host": "localhost",
     "dialect": "postgres",
     "email": {
@@ -12,9 +12,9 @@
     }
   },
   "test": {
-    "username": "mike",
+    "username": "Mike",
     "password": "",
-    "database": "mike",
+    "database": "Mike",
     "host": "localhost",
     "dialect": "postgres",
     "email": {

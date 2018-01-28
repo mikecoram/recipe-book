@@ -1,8 +1,19 @@
-<div class="container" style="white-space:pre-line;">
-    {{#each tags}}
-        <a href="/tag/{{id}}">{{title}}</a>
-    {{/each}}
-    {{#each recipes}}
-        <a href="/recipe/{{id}}">{{title}}</a>
-    {{/each}}
+<link href="/css/recipes/all.css" rel="stylesheet">
+
+<div class="container">
+    <ul class="tag-list">
+        {{#each tags}}
+            <li>
+                <button id="tag-{{id}}" class="tag btn {{#if selected}}btn-primary{{else}}btn-danger{{/if}}">{{title}}</button>
+            </li>
+        {{/each}}
+    </ul>
+
+    <ul class="recipe-list">
+        {{#each recipes}}
+            <li><a href="/recipe/{{id}}">{{title}}</a></li>
+        {{/each}}
+    </ul>
 </div>
+
+<script src="/js/recipes/all.js"></script>

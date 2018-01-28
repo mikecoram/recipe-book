@@ -1,0 +1,12 @@
+.tag-list li {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.tag-list ul {
+    list-style-type: none;
+}
+
+.tag-list {
+    margin-bottom:2em;
+}

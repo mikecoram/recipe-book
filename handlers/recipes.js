@@ -10,9 +10,14 @@ exports.view = async function(req, res) {
 }
 
 exports.all = async function(req, res) {
-    let recipes = await recipesHandler.getAll(req.user.id);
-    let tags = await tagHandler.all(req.user.id);
-    console.log(tags);
+    let tagIds;
+    if (req.query.tag) {
+        tagIds = tagHandler.parseQuery(req.query.tag);
+    }
+    
+    let recipes = await recipesHandler.getAll(req.user.id, tagIds);
+    let tags = await tagHandler.all(req.user.id, tagIds);
+
     res.render('recipes/all', {
         authorised: true,
         recipes: recipes,
