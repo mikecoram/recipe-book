@@ -8,7 +8,7 @@ PostgreSQL database (Postgres.app is good for local testing on a Mac)
 ### Setup
 Install node/npm.
 ~~~~ 
-git clone https://mikecoram@bitbucket.org/mikecoram/prepare.git
+git clone https://mikecoram@bitbucket.org/mikecoram/recipe-book.git
 npm install
 ~~~~
 Set up a postgreSQL database and then edit config/config.json to point to the database.
