@@ -27,9 +27,7 @@ exports.all = async function(req, res) {
 
 exports.new = function(req, res) {
     res.render('recipes/new', {
-        authorised: true,
-        ingredients: [{num: 1}, {num: 2}, {num: 3}],
-        steps : [{num: 1}, {num: 2}, {num: 3}]
+        authorised: true
     });
 }
 
