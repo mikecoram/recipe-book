@@ -32,6 +32,14 @@ exports.new = function(req, res) {
 }
 
 exports.create = async function(req, res) {
-    await recipesHandler.create(req);
+    let recipeData = recipesHandler.parseRecipeCreationRequest(req);
+
+    await recipesHandler.create(
+        req.user.id, 
+        recipeData.recipe, 
+        recipeData.ingredients, 
+        recipeData.tags
+    );
+    
     res.redirect('/recipes/new');
 }
