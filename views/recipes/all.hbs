@@ -4,7 +4,11 @@
     <ul class="tag-list">
         {{#each tags}}
             <li>
-                <button id="tag-{{id}}" class="tag btn {{#if selected}}btn-primary{{else}}btn-danger{{/if}}">{{title}}</button>
+                <button 
+                    id="tag-{{id}}" style="border-color:{{color}};{{#if selected}}background-color:{{color}};{{/if}}"
+                    class="tag btn btn-tag">
+                        {{title}}
+                </button>
             </li>
         {{/each}}
     </ul>

@@ -10,3 +10,9 @@
 .tag-list {
     margin-bottom:2em;
 }
+
+.btn-tag {
+    background-color:white;
+    border-width:0.15em;
+    font-weight:bold;
+}
