@@ -22,7 +22,7 @@ module.exports = {
         allowNull: false
       },
       method: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       nutrition: {
         type: Sequelize.STRING
